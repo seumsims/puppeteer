@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puppeteer Screenshot fullPage First Use</title>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" rel="stylesheet">
+    <link href="../../resources/bootstrap-5.2.2-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../../resources/highlight/styles/atom-one-light.min.css" rel="stylesheet" type="text/css">
+    
+
+</head>
+<body>
+            <div class="container">
+                <header class="row">
+                    <div class="row">
+                        <div class="col">
+                        <h1 class="display-1">Puppeteer Fisrt Use</h1>
+                        </div>
+                    </div>
+                </header>
+    
+                <main class="row">
+    
+                
+    
+               
+    
+                    <section class="row">
+                        <div class="col-auto">
+                            <h1 class="display-3">
+                                Write First Puppeteer Logics Full Page Screenshot
+                            </h1>
+                            <div class="row">
+                                <div class="col-auto">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/S67gyqnYHmI?start=342" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <pre>
+                                <h2>require puppeteer</h2>
+                                <code class="language-javascript hljs border border-warning border-top-0  border-start-0  border-end-0">
+                                    const puppeteer = require('puppeteer');
+                                </code>
+                                <h2>Write Necessarry Logics</h2>
+                                <code class="language-javascript hljs border border-success">
+                                    const puppeteer = require('puppeteer');
+                                        // console.log("Salamoon Alaikoom");
+
+                                        async function run() {
+                                            const browser = await puppeteer.launch();
+                                            const page = await browser.newPage();
+                                            await page.goto('https://www.facebook.com');
+
+                                            await page.screenshot(
+                                                {
+                                                    path: 'example.png', 
+                                                    fullPage: true
+                                                }
+                                                );
+
+                                            // await page.screenshot({path: 'example-facebook.png'}, {fullPage: true});
+                                            
+                                            await browser.close();
+                                            }
+
+                                        run();
+                                </code>
+                            </pre>
+                            <pre>
+                                <h2>require puppeteer</h2>
+                                <code class="language-javascript hljs border border-warning border-top-0  border-start-0  border-end-0">
+                                    const puppeteer = require('puppeteer');
+                                </code>
+                                <h2>Write Necessarry Logics</h2>
+                                <code class="language-javascript hljs border border-success">
+                                    const puppeteer = require('puppeteer');
+                                    // console.log("Salamoon Alaikoom");
+                                    const puppeteer = require('puppeteer');
+                                    
+                                    (async () => {
+                                        const browser = await puppeteer.launch();
+                                        const page = await browser.newPage();
+                                        await page.goto('https://example.com');
+                                        await page.screenshot({path: 'example.png'});
+                                    
+                                        await browser.close();
+                                    })();       
+                                </code>
+                            </pre>
+                            
+                            <textarea class="shadow border border-success" name="" id="" cols="90" rows="20">
+                                const puppeteer = require('puppeteer');
+                                    
+                                (async () => {
+                                    const browser = await puppeteer.launch();
+                                    const page = await browser.newPage();
+                                    await page.goto('https://example.com');
+                                    await page.screenshot({path: 'example.png'});
+                                
+                                    await browser.close();
+                                })();      
+                            </textarea>
+                        
+                        </div>
+                    </section>
+                </main>
+                <footer class="row">
+
+                </footer>
+                </div>
+
+
+        
+    <script crossorigin="anonymous"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js">
+    </script>
+        
+        <script src="../../resources/bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
+        
+        <script src="../../resources/highlight/dist/highlight.min.js" type="text/javascript"></script>
+        
+        <script>
+            document.querySelectorAll("code").forEach(function (element) {
+                element.innerHTML = element.innerHTML.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+            });
+            hljs.highlightAll();
+        </script>
+</body>
+</html>
